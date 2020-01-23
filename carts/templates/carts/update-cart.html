@@ -1,0 +1,9 @@
+<form method="POST" action="{% url 'carts:update' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_id" value="{{product.id}}">
+        {% if product in cart.products.all %}
+        <button class="primary-btn" type="submit" >Remove to Cart</button>
+         {% else %}
+         <button class="primary-btn" type="submit" >Add to Cart</button>
+         {% endif %} 
+</form>

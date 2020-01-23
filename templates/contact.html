@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+
+{% block style %}
+
+<style>
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+          }
+          
+          input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+          
+          input[type=submit]:hover {
+            background-color: #45a049;
+          }
+</style>
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="container mb-4">
+        <form action="" style="margin-top:150px;" method="POST">
+          {% csrf_token %}
+          <label for="fname">Subject</label>
+          <input type="text" id="fname" name="subject" placeholder="Subject..">
+      
+          <label for="lname">Email</label>
+          <input type="text" id="lname" name="mail" placeholder="Your mail..">
+      
+          
+        
+      
+          <label for="subject">description</label>
+          <textarea id="subject" name="description" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "admin/base.html" %}
+
+
+{% load staticfiles %}
+
+
+{% block title %} Medical Store {% endblock %}
+
+
+{% block branding %}
+
+ <h1 id="head">
+     <img style="width:5% !important;" src="{% static 'img/fav.png' %}" alt="" class="brand_img" >
+     Medical store
+ </h1>
+
+{% endblock %}
+
+
+{% block extrastyle %}
+
+ <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+
+{% endblock %}
+
+
+{% block extrahead %}
+<link rel="icon" href="https://i.etsystatic.com/17736065/r/il/7ce77e/1680169357/il_570xN.1680169357_77mo.jpg" sizes="48x48" />
+{% endblock %}
